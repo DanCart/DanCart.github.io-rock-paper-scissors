@@ -7,9 +7,10 @@
 <body>
   <script>
     // Your JavaScript goes here!
-   
-   //function computerPlay(computerMove){
-    let computerMove
+   let computerMove 
+   let playerMove 
+   function computerPlay(computerMove){
+    //computerMove =""
     let choice = Math.floor(Math.random() * 3);
     if (choice == 0){
         computerMove = "rock";
@@ -18,14 +19,38 @@
     } else {
         computerMove = "scissors";
     }
-   //}
-//console.log(computerPlay())
-console.log(computerMove)
-   //function playRound(playerSelection, computerSelection){
-       // My code  "You Lose! Paper beats Rock"   case insensitive
-   //}
+    return computerMove
+   }
+console.log(computerPlay())
 
-  // const playerSelection ='rock'
+   function playerPlay(playerMove){
+     //playerMove =""
+     let choice = Math.floor(Math.random() * 3);
+    if (choice == 0){
+        playerMove = "rock";
+    } else if (choice == 1){
+        playerMove = "paper";
+    } else {
+        playerMove = "scissors";
+    }
+    return playerMove
+   }
+
+console.log(playerPlay())
+
+   
+
+   function playRound(playerPlay, computerPlay){
+      
+       if (playerMove == "rock" && computerMove == "paper"){
+         console.log("You lose! Paper beats Rock!");
+       } else if (playerMove == "rock" && computerMove == "rock"){
+         console.log("It's a draw!");}
+         else if (playerMove == "rock" && computerMove == "scissors"){
+         console.log("You win! Rock beats Scissors!")}
+   }
+ console.log(playRound())
+  // const playerSelection ='rock' (playerMove, computerMove)
   // const computerSelection = computerPlay()
    //console.log(playround(playerSelection, computerSelection))
   </script>
